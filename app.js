@@ -3,15 +3,9 @@ const express = require('express')
 
 const app = express()
 
+const PORT = 3000;
 
 //RUTAS
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
-
-app.get('/servicios'), (req,res) => {
-    res.send('servicios');
-}
 
 // levanta servidor
 app.listen(3000, () => {
@@ -22,3 +16,23 @@ app.listen(3000, () => {
 //OP 1: node app.js
 //OP 2: npm dev
 //OP 3:
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en `)
+})
+
+// configurar ejs
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
+app.get('/servicios', (req, res) => {
+    res.render('Servicios')
+})
+
+app.get('/nosotros', (req, res) => {
+    res.render('nosotros')
+})

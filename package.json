@@ -1,4 +1,3 @@
-
 {
   "name": "web4b",
   "version": "1.0.0",
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/yoeldeorte-beep/web4b#readme",
   "dependencies": {
+    "ejs": "^6.0.1",
     "express": "^5.2.1"
   }
 }
